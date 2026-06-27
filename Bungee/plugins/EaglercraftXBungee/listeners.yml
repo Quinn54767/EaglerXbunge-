@@ -1,5 +1,5 @@
 listener_01:
-  address: 0.0.0.0:25577
+  address: 0.0.0.0:8080
   address_v6: 'null'
   max_players: 15
   tab_list: GLOBAL_PING
