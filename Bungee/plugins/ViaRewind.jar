@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | ViaVersion Project</title>
+    <link rel="preconnect" href="https://api.github.com"/>
+    <link rel="preconnect" href="https://avatars.githubusercontent.com"/>
+    <link href="common.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="index.js"></script>
+    <link rel="icon" type="image/png" sizes="128x128" href="images/viaversion.png">
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="images/128.png">
+    <meta property="og:url" content="https://viaversion.com/"/>
+    <meta property="og:site_name" content="Home | ViaVersion Project"/>
+    <meta property="og:title" content="Home | ViaVersion Project"/>
+    <meta property="og:description"
+          content="Overview of all ViaVersion software from the classic plugins to mods and even standalone apps - find the right software and get all the information you need"/>
+    <meta name="description"
+          content="Overview of all ViaVersion software from the classic plugins to mods and even standalone apps - find the right software and get all the information you need">
+    <meta name="keywords"
+          content="minecraft, java, protocol, packet, java-edition, plugin, protocol translator, translator, minecraft server, viaversion, viabackwards, viarewind, viaversion overview, viafabric, viaforge, viafabricplus, mod, paper, velocity, waterfall, bungeecord, spigot, block-version, block-protocols, proxy, cross-version, viabungee, sponge">
+    <style>
+        .container {
+            min-height: 2127px;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        #popup-body {
+            margin: auto;
+        }
+
+        .modal-dialog {
+            max-width: 650px;
+        }
+
+        .project {
+            width: 12em;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .container {
+                min-height: 4806px;
+            }
+
+            .project {
+                width: 5em;
+            }
+
+            #popup {
+                font-size: 16px;
+            }
+
+            body {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img
+                    src="images/logotext-small.png"
+                    alt="Via logo" height="32" width="63"> ViaVersion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="downloads.html">Downloads</a>
+                    <a class="nav-link" href="setup.html">Setup</a>
+                    <a class="nav-link" href="team.html">Team</a>
+                </div>
+                <div class="btn-group">
+                    <a class="nav-link fs-3 px-lg-4" href="https://github.com/viaversion"
+                       target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a class="nav-link fs-3" href="https://discord.gg/viaversion"
+                       target="_blank" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container" style="margin-top: 75px">
+    <div class="row p-4 fs-6 rounded cardcontainer text-center bg-content">
+        <h1 class="fs-2">Why Lose Players After a Minecraft Update?</h1>
+        <p>Our projects allow you to connect with various Minecraft versions, we support all common platforms and our
+            own standalone proxy to join from basically any client version
+            on any server version from the past decade. We were founded in 2016 by FormallyMyles and over the last 8
+            years the project is driven by a team of developers.</p>
+        <a href="#" class="text-white" id="setup-guide-text" onclick="openSetupGuide()"><b>Don't know where to
+            start? Click here to open the installation guide</b></a>
+    </div>
+
+    <div id="setupModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick Start</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="formContent"></form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="popup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" id="popup-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row my-3 p-3 cardcontainer" id="projects-overview"></div>
+    </div>
+
+    <div>
+        <h2 class="text-center">Contributing to ViaVersion</h2>
+        <p class="text-center">We appreciate your support! For contributions, check out our GitHub page.</p>
+        <div class="row my-3 p-3 cardcontainer rounded justify-content-center" id="contributor-grid"></div>
+        <div class="text-center">
+            <p>We are always looking for new contributors to help with our projects. You can
+                contribute by:</p>
+            <a href="https://github.com/ViaVersion/ViaVersion/pulls" target="_blank" class="btn btn-info">Opening a Pull
+                Request</a>
+            <a href="https://viaversion.com/donate" target="_blank" class="btn btn-warning">Donating</a></div>
+    </div>
+</div>
+<footer>
+    <div class="mt-5 pt-5 pb-3 bg-content" style="overflow: hidden;">
+        <div class="row align-items-start text-center">
+            <div class="col">
+                <h4>Services</h4>
+                <a href="https://jd.viaversion.com/" target="_blank" class="footer-link">Javadocs</a><br>
+                <a href="https://repo.viaversion.com/" target="_blank" class="footer-link">Repository Server</a><br>
+                <a href="https://ci.viaversion.com/" target="_blank" class="footer-link">Jenkins (CI)</a>
+            </div>
+            <div class="col">
+                <h4>Community</h4>
+                <a href="https://discord.gg/viaversion" target="_blank" class="footer-link">Discord</a><br>
+                <a href="https://github.com/ViaVersion" target="_blank" class="footer-link">GitHub</a><br>
+                <a href="https://hangar.papermc.io/ViaVersion" target="_blank" class="footer-link">Hangar</a><br>
+                <a href="https://modrinth.com/organization/viaversion" target="_blank" class="footer-link">Modrinth</a>
+            </div>
+            <div class="col">
+                <h4>Organisation</h4>
+                <a href="team.html" class="footer-link">Our Team</a><br>
+                <a href="https://github.com/ViaVersion/ViaVersion/pulls" target="_blank"
+                   class="footer-link">Contribute</a><br>
+                <a href="https://viaversion.com/donate" target="_blank" class="footer-link">Donate</a><br>
+                <a href="https://github.com/ViaVersionAddons" target="_blank" class="footer-link">ViaVersion Addon</a>
+            </div>
+            <div class="col">
+                <h4>Miscellaneous</h4>
+                <a href="setup.html" class="footer-link">ViaSetup</a><br>
+                <a href="https://docs.viaversion.com/" target="_blank" class="footer-link">Documentation</a><br>
+                <a href="https://github.com/ViaVersion/ViaVersion/tree/master?tab=readme-ov-file#license"
+                   target="_blank" class="footer-link">Licensing</a><br>
+            </div>
+        </div>
+        <div class="text-center m-3">© 2016-2026 The ViaVersion Team.</div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "9e524d0ad093418fbbe97cf1a013ee81"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
