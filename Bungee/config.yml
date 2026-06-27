@@ -1,7 +1,7 @@
 enforce_secure_profile: false
 listeners:
 - query_port: 25577
-  motd: '&1Another Bungee server'
+  motd: Fenrir SMP
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
@@ -12,7 +12,7 @@ listeners:
   - lobby
   bind_local_address: false
   host: 127.0.0.1:25577
-  max_players: 1
+  max_players: 15
   tab_size: 60
   force_default_server: true
 remote_ping_cache: -1
@@ -47,6 +47,6 @@ disabled_commands:
 - disabledcommandhere
 servers:
   lobby:
-    motd: '&1Just another BungeeCord - Forced Host'
-    address: neptune.ca.freemcserver.net:25839
+    motd: Fenir SMP
+    address: FenrirDogSMP.aternos.me:38342
     restricted: false
