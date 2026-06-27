@@ -11,7 +11,7 @@ listeners:
   priorities:
   - lobby
   bind_local_address: false
-  host: 127.0.0.1:25577
+  host: 127.0.0.1:25565
   max_players: 15
   tab_size: 60
   force_default_server: true
@@ -28,11 +28,11 @@ permissions:
   - bungeecord.command.reload
   - bungeecord.command.kick
 log_pings: true
-connection_throttle_limit: 3
+connection_throttle_limit: -1
 server_connect_timeout: 5000
-timeout: 30000
-stats: df1c785f-c6a4-43bc-994c-c63b03c26265
-player_limit: -1
+timeout: 60000
+player_limit: 20
+prevent_proxy_connections: false
 ip_forward: false
 groups:
   md_5:
@@ -40,13 +40,13 @@ groups:
 remote_ping_timeout: 5000
 connection_throttle: 4000
 log_commands: false
-prevent_proxy_connections: false
+stats: df1c785f-c6a4-43bc-994c-c63b03c26265
 online_mode: false
-forge_support: true
+forge_support: false
 disabled_commands:
 - disabledcommandhere
 servers:
   lobby:
-    motd: Fenir SMP
+    motd: '&bFenir SMP'
     address: FenrirDogSMP.aternos.me:38342
     restricted: false
